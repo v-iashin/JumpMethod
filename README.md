@@ -14,12 +14,12 @@ Another reason why this repository was created is that the implementation of the
 ## Files
 In the repository, one may find an article itself with the illustration of the results that is needed to replicate (`article` folder).
 
-Also, this repository contains a Python class `jumpmethod.py` which in turn contains two functions: `Distortions` and `Jumps` that calculates vector of distortions and jumps for a given number of clusters to check.
+Also, this repository contains a Python class `jumpmethod.py` which in turn contains two functions: `Distortions` and `Jumps` that calculates vectors of distortions and jumps for a given number of clusters to check.
 
-Finally, there is also a JupyterNotebook `Simulations (Figure 4).ipynb` which was created for illustative explanations why the replication can be achieved.
+Finally, there is also a JupyterNotebook `Simulations (Figure 4).ipynb` which was created for illustrative explanations why the replication can be achieved.
 
 ## TODO:
-1. Add the Transformed distortion curves to class (easy: this is just a cummulate of Jumps).
-2. In README the discription of the algorithm.
-3. Iris results replication.
-4. Bootstrap replication.
+1. Add the Transformed distortion curves to class (easy: this is just a cumulate of Jumps).
+2. Add to the README the discription of the algorithm.
+3. Replicate the Iris results (SJ, p. 12).
+4. Replicate the bootstrap results (SJ, pp. 13--15).
