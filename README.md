@@ -1,4 +1,4 @@
-# JumpsMethod
+# Jump Method algorithm on Python
 *UPD: 19 Feb 2017*
 
 ## Motivation
