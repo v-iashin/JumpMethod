@@ -1,4 +1,4 @@
-# The implementation of the Jump Clustering Algorithm on Python
+# The Implementation of the Jump Clustering Algorithm on Python
 *UPD: 20 Feb 2017*
 
 ## Motivation
