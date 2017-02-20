@@ -1,10 +1,10 @@
-# Jump Method clustering algorithm on Python
-*UPD: 19 Feb 2017*
+# The Implementaion of the Jump Clustering Algorithm on Python
+*UPD: 20 Feb 2017*
 
 ## Motivation
 This repository contains an attempt to replicate some of the results that were achieved in
 
-    `Sugar, C. A., & James, G. M. (2003). Finding the number of clusters in a dataset: An information-theoretic approach. Journal of the American Statistical Association, 98(463), 750–763. JOUR.`
+`Sugar, C. A., & James, G. M. (2003). Finding the number of clusters in a dataset: An information-theoretic approach. Journal of the American Statistical Association, 98(463), 750–763. JOUR.`
 
 [link](http://www-bcf.usc.edu/~gareth/research/ratedist.pdf)
 
