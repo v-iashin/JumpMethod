@@ -20,7 +20,7 @@ Also, this repository contains a Python class `jumpmethod.py` which in turn cont
 Finally, there is also a JupyterNotebook `Simulations (Figure 4).ipynb` which was created for illustrative explanations why and how the replication can be achieved.
 
 ## TODO:
-1. Add the Transformed distortion curves to class (easy: this is just a cumulate of Jumps).
-2. Add to the README the discription of the algorithm.
+1. Add the Transformed distortion curves to the class (easy: this is just a cumulate of Jumps).
+2. Add the discription of the algorithm to the README.
 3. Replicate the Iris results (SJ, p. 12).
 4. Replicate the bootstrap results (SJ, pp. 13--15).
