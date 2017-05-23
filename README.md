@@ -1,5 +1,4 @@
 # The Implementation of the Jump Clustering Algorithm on Python
-*UPD: 20 Feb 2017*
 
 ## Motivation
 This repository contains an attempt to replicate some of the results that were achieved in
@@ -24,3 +23,4 @@ Finally, there is also a JupyterNotebook `Simulations (Figure 4).ipynb` which wa
 2. Add the discription of the algorithm to the README.
 3. Replicate the Iris results (SJ, p. 12).
 4. Replicate the bootstrap results (SJ, pp. 13--15).
+5. Performance check (may be improvements).
