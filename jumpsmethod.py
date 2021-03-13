@@ -48,7 +48,7 @@ class JumpsMethod(object):
                     tmp = np.transpose(self.data[i] - centers[cluster])
                     """ 'using squared error rather than Mahalanobis distance' (SJ, p. 12)
                     dists[cluster] = tmp.dot(self.Sigma_inv).dot(tmp)"""
-                    dists[cluster] = tmp.dot(tmp)
+                    dists[cluster] = tmp.dot(tmp.T)
 
                 # take the lowest distance to a class
                 for_mean[i] = min(dists)
