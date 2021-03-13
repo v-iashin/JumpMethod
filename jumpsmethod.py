@@ -1,8 +1,8 @@
 import numpy as np
 from sklearn.cluster import KMeans
 
-class JumpsMethod(object):
-    
+class JumpsMethod():
+
     def __init__(self, data):
         self.data = data
         # dimension of 'data'; data.shape[0] would be size of 'data'
@@ -17,11 +17,11 @@ class JumpsMethod(object):
         np.fill_diagonal(self.Sigma, val=sigmas)
         # calculate the inversed matrix
         self.Sigma_inv = np.linalg.inv(self.Sigma)"""
-    
-    
-    def Distortions(self, cluster_range=range(1, 10 + 1), random_state=0):
+
+
+    def distortions(self, cluster_range=range(1, 10 + 1), random_state=0):
         """ returns a vector of calculated distortions for each cluster number.
-            If the number of clusters is 0, distortion is 0 (SJ, p. 2) 
+            If the number of clusters is 0, distortion is 0 (SJ, p. 2)
             'cluster_range' -- range of numbers of clusters for KMeans;
             'data' -- n by p array """
         # dummy vector for Distortions
@@ -30,10 +30,10 @@ class JumpsMethod(object):
         # for each k in cluster range implement
         for k in cluster_range:
             # initialize and fit the clusterer giving k in the loop
-            KM = KMeans(n_clusters=k, random_state=random_state)
-            KM.fit(self.data)
+            km = KMeans(n_clusters=k, random_state=random_state)
+            km.fit(self.data)
             # calculate centers of suggested k clusters
-            centers = KM.cluster_centers_
+            centers = km.cluster_centers_
             # since we need to calculate the mean of mins create dummy vec
             for_mean = np.repeat(0, len(self.data)).astype(np.float32)
 
@@ -57,24 +57,24 @@ class JumpsMethod(object):
             self.distortions[k] = np.mean(for_mean) / self.p
 
         return self.distortions
-    
-    
-    def Jumps(self, Y=None):
+
+
+    def jumps(self, y=None):
         """ returns a vector of jumps for each cluster """
-        # if Y is not specified use the one that suggested by the authors (SJ, p. 2) 
-        if Y is None:
-            self.Y = self.p / 2
-        
+        # if y is not specified use the one that suggested by the authors (SJ, p. 2)
+        if y is None:
+            self.y = self.p / 2
+
         else:
-            self.Y = Y
-        
+            self.y = y
+
         # the first (by convention it is 0) and the second elements
-        self.jumps = [0] + [self.distortions[1] ** (-self.Y) - 0]
-        self.jumps += [self.distortions[k] ** (-self.Y) \
-                       - self.distortions[k-1] ** (-self.Y) \
+        self.jumps = [0] + [self.distortions[1] ** (-self.y) - 0]
+        self.jumps += [self.distortions[k] ** (-self.y) \
+                       - self.distortions[k-1] ** (-self.y) \
                        for k in range(2, len(self.distortions))]
-        
-        # calculate recommended number of clusters
-        self.recommended_cluster_number = np.argmax(np.array(self.jumps))
-        
         return self.jumps
+
+    def number_clusters(self):
+        """ return the number of clusters according to the Jump method """
+        return np.argmax(np.array(self.jumps))
