@@ -17,7 +17,7 @@ have not found any).
 
 ## Files
 Also, this repository contains a Python class `jumpmethod.py` which in turn
-contains two functions: `Distortions` and `Jumps` that calculate vectors of
+contains two functions: `distortions` and `jumps` that calculate vectors of
 distortions and jumps for a given number of clusters to check.
 
 Finally, there is also a JupyterNotebook `Simulations (Figure 4).ipynb` which
