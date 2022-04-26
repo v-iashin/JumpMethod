@@ -34,18 +34,18 @@ class JumpsMethod():
             km.fit(self.data)
             # calculate centers of suggested k clusters
             centers = km.cluster_centers_
-            # since we need to calculate the mean of mins create dummy vec
+            # since we need to calculate the mean of mins create dummy vector
             for_mean = np.repeat(0, len(self.data)).astype(np.float32)
 
             # for each observation (i) in data implement
-            for i in range(len(self.data)):
-                # dummy for vec of distances between i-th obs and k-center
+            for i, element in enumerate(self.data):
+                # dummy for vector of distances between i-th obs and k-center
                 dists = np.repeat(0, k).astype(np.float32)
 
-                # for each cluster in KMean clusters implement
+                # for each cluster in KMeans clusters implement
                 for cluster in range(k):
                     # calculate the within cluster dispersion
-                    tmp = np.transpose(self.data[i] - centers[cluster])
+                    tmp = np.transpose(element - centers[cluster])
                     """ 'using squared error rather than Mahalanobis distance' (SJ, p. 12)
                     dists[cluster] = tmp.dot(self.Sigma_inv).dot(tmp)"""
                     dists[cluster] = tmp.dot(tmp.T)
