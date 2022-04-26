@@ -20,6 +20,14 @@ Also, this repository contains a Python class `jumpmethod.py` which in turn
 contains two functions: `distortions` and `jumps` that calculate vectors of
 distortions and jumps for a given number of clusters to check.
 
+To use this:
+```python
+jm = JumpsMethod(data)
+jm.distortions()
+jm.jumps()
+number_cluster = jm.number_clusters()
+```
+
 Finally, there is also a JupyterNotebook `Simulations (Figure 4).ipynb` which
 was created for illustrative explanations why and how the replication can be
 achieved.
