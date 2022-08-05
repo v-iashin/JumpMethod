@@ -6,7 +6,7 @@ achieved in
 
 [Sugar, C. A., & James, G. M. (2003). Finding the number of clusters in a
 dataset: An information-theoretic approach. Journal of the American
-Statistical Association, 98(463), 750–763. JOUR.](http://www-bcf.usc.edu/~gareth/research/ratedist.pdf)
+Statistical Association, 98(463), 750–763. JOUR.](https://faculty.marshall.usc.edu/gareth-james/Research/ratedist.pdf)
 
 In particular, it is attempted to replicate the results that are illustrated
 in Figure 4.
